@@ -58,22 +58,22 @@ public:
         m_additionalPayload = additionalPayload;
     }
 
-    inline std::string licensee() const
+    inline const std::string& licensee() const
     {
         return m_licensee;
     }
 
-    inline std::string issuingAuthorityId() const
+    inline const std::string& issuingAuthorityId() const
     {
         return m_issuingAuthorityId;
     }
 
-    inline std::string licenseeSignature() const
+    inline const std::string& licenseeSignature() const
     {
         return m_licenseeSignature;
     }
 
-    inline std::string authoritySignature() const
+    inline const std::string& authoritySignature() const
     {
         return m_authoritySignature;
     }
@@ -88,11 +88,12 @@ public:
         return m_issueDate;
     }
 
-    inline std::string additionalPayload() const
+    inline const std::string& additionalPayload() const
     {
         return m_additionalPayload;
     }
 
+    std::string toJsonString();
 
     std::string toString();
 
